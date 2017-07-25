@@ -48,7 +48,7 @@ helm-package:
 	helm package --version $(VERSION) $(APP_NAME)
 
 deploy:
-	helm upgrade --install --reuse-values $(APP_NAME) $(APP_NAME)-$(VERSION).tgz
+	helm upgrade --install --reuse-values $(APP_NAME) --set image.tag=$(VERSION) $(APP_NAME)-$(VERSION).tgz
 
 clean:
 	rm -rf *.tgz
