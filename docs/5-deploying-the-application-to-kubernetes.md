@@ -22,7 +22,9 @@ Under the covers this performs the following actions:
 
 1. Packages the helm chart (java-demo-app) to be the same version as the docker image
 
-2. Deploys the helm package to the Kubernetes cluster using the default `values.yaml` file.
+2. Sets the `image.tag` in `values.yaml` to the same as our newly upload docker image verison
+
+3. Deploys the helm package to the Kubernetes cluster using the default `values.yaml` file.
 
 ## Verification
 
