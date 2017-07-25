@@ -12,6 +12,16 @@ The following workflow expects the following to be true:
 
 ## Deployment
 
+Make sure you set the `tag` value in `java-demo-app/values.yaml` to be the version you upload to quay.io
+
+```
+image:
+  repository: quay.io
+  name: apprenda/java-demo-app
+  tag: '1.1.1'
+  pullPolicy: IfNotPresent
+```
+
 To deploy the application simple execute the following command:
 
 ```
@@ -20,7 +30,7 @@ $ make deploy-dev
 
 Under the covers this performs the following actions:
 
-1. Packages the helm chart (/java-demo-app) to be the same version as the docker image
+1. Packages the helm chart (java-demo-app) to be the same version as the docker image
 
 2. Deploys the helm package to the Kubernetes cluster using the default `values.yaml` file.
 
