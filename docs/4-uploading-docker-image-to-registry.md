@@ -19,3 +19,7 @@ Under the covers the command above executes the following steps:
 - Logs the docker daemon into quay.io to allow for uploading
 - Uploads the image we built to quay.io repository specificed in the Makefile.
 - Logs the docker daemon out of accessing quay.io
+
+## Deploying the application to Kubernetes
+
+To deploy the application to Kubernetes click [here](5-deploying-the-application-to-kubernetes.md)
