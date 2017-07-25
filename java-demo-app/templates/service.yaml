@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Chart.Name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app_name: {{ .Chart.Name }}
+    app_version: {{ .Values.image.tag | quote }}
+    helm_chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+spec:
+  ports:
+  - name: http-port
+    port: 80
+    targetPort: {{ .Values.ports.targetPort }}
+  selector:
+    app_name: {{ .Chart.Name }}
