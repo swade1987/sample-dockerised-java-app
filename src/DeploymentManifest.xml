@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<appManifest xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.apprenda.com/DeploymentManifest http://apprenda.com/schemas/platform/6.5/DeploymentManifest.xsd" xmlns="http://schemas.apprenda.com/DeploymentManifest">
+  <presentation strategy="CommingledAppRoot" scalingType="Manual" />
+  <wars>
+    <war name="gs-rest-service-0.1.0" javaVersion="JRE 1.8" logMessageFormat="%-6r [%15.15t] %-5p %c %x - %m%n" containerType="Tomcat 7" />
+  </wars>
+   <customProperties>
+    <customProperty name="PII">
+      <values>
+        <propertyValue value="Yes" />
+      </values>
+    </customProperty>
+  </customProperties>
+  <applicationServices level="None" enforceSsl="False" sessionReplication="False" loadBalancerUrlConfiguration="Preserve" stickySessions="False" />
+</appManifest>
