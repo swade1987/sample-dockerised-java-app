@@ -1,10 +1,11 @@
 # Uploading the docker image to the container registry
 
-Firstly we need to make sure we specify the [Quay.io](https://quay.io/repository/) password.
+Firstly we need to make sure we specify the [Quay.io](https://quay.io/repository/) username and password.
 
 To do this execute the following command:
 
 ```
+$ export QUAY_USERNAME=<username>
 $ export QUAY_PASSWORD=<password>
 ```
 

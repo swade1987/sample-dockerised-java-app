@@ -8,7 +8,7 @@
 
 ![alt text](../img/2-initial-pipeline-stage.png)
 
-## 3. Setting up the secured environment variable for the quay.io password
+## 3. Setting up the secured environment variable for the quay.io username and password.
 
 ![alt text](../img/3-setting-secure-environment-variable.png)
 

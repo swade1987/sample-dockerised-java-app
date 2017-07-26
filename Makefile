@@ -2,7 +2,7 @@ APP_NAME=java-demo-app
 CURRENT_WORKING_DIR=$(shell pwd)
 
 QUAY_REPO=apprenda
-QUAY_USERNAME=swade1987
+QUAY_USERNAME?="unknown"
 QUAY_PASSWORD?="unknown"
 
 GO_PIPELINE_COUNTER?="unknown"
