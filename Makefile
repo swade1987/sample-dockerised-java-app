@@ -13,7 +13,7 @@ VERSION=1.1.$(GO_PIPELINE_COUNTER)
 # Construct docker image name.
 IMAGE = quay.io/$(QUAY_REPO)/$(APP_NAME)
 
-build: build-app build-image
+build: build-app clean-app build-image
 
 push: docker-login push-image docker-logout
 
@@ -22,8 +22,9 @@ deploy-dev: helm-package deploy
 build-app:
 	docker build -t build-img:$(VERSION) -f Dockerfile.build .
 	docker run --name build-image-$(VERSION) --rm -v $(CURRENT_WORKING_DIR)/src:/usr/bin/app:rw build-img:$(VERSION) mvn clean package
-    docker rmi build-img:$(VERSION)
-	docker rm -f build-img:$(VERSION)
+
+clean-app:
+	docker rmi build-img:$(VERSION)
 
 build-image:
 	docker build \
